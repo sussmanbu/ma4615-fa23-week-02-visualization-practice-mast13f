@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="[[Your Name]]">
+<meta name="author" content="Peiyang Liu">
 <meta name="dcterms.date" content="2023-09-11">
 
 <title>Week 02: COVID Visualization Activity</title>
@@ -91,7 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p><strong><code>[[</code></strong>Your Name<strong><code>]]</code></strong> </p>
+             <p><strong>Peiyang Liu</strong> </p>
           </div>
   </div>
     
@@ -151,10 +151,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ol type="1">
 <li>Write code for a plot and describe what you observe?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>covid_data_long <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(count_type <span class="sc">==</span> <span class="st">"Cases"</span>, race <span class="sc">==</span> <span class="st">"Total"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> count, <span class="at">color =</span> state)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Week_02_Covid_Vis_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This a plot to show cases changes by time among different states. Some states obviously have a higher increasing rate than others’.</p>
+<ol start="2" type="1">
 <li>Are there any conclusions you can draw?</li>
+</ol>
+<p>It looks like most states have a peak increase rate around January.</p>
+<ol start="3" type="1">
 <li>What were you not able to do due to not having the R knowledge?</li>
+</ol>
+<p>I was not able to draw a Venn diagram to show case/death/hosp proportions.</p>
+<ol start="4" type="1">
 <li>What other data would be useful to better understand this data?</li>
 </ol>
+<p>Data about policies would be helpful to determine what policies work better.</p>
 
 </main>
 <!-- /main column -->
