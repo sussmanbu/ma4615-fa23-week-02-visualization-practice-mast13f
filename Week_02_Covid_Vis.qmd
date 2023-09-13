@@ -36,6 +36,22 @@ covid_data_count |>
 ```
 
 1. Write code for a plot and describe what you observe?
+```{r}
+covid_data_long |> 
+  filter(count_type == "Cases", race == "Total") |> 
+  ggplot(aes(x = date, y = count, color = state)) + geom_line()
+```
+  This a plot to show cases changes by time among different states.
+  Some states obviously have a higher increasing rate than others'.
+
 2. Are there any conclusions you can draw?
+
+  It looks like most states have a peak increase rate around January.
+  
 3. What were you not able to do due to not having the R knowledge?
+
+  I was not able to draw a Venn diagram to show case/death/hosp proportions.
+  
 4. What other data would be useful to better understand this data?
+  
+  Data about policies would be helpful to determine what policies work better.
